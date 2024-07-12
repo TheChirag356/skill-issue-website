@@ -17,8 +17,8 @@ Our CTF team is dedicated to participating in various cybersecurity competitions
 ## Technologies Used
 
 - HTML5, CSS3, and JavaScript for front-end development
-- Bootstrap framework for responsive design
-- Flask or Django for back-end development (optional)
+- ReactJs Library
+- Tailwind for responsive design
 - Git and GitHub for version control and collaboration
 
 ## Contributing
