@@ -1,9 +1,14 @@
 import React from 'react'
+import Team from '../Team/Team'
+import Hero from '../Hero/Hero'
+import Bg from '../Bg/Bg'
 
 function Home() {
     return (
         <>
-            <p className='text-center text-3xl'>Welcome to the Home page</p>
+            <Bg />
+            <Hero />
+            <Team />
         </>
     )
 }

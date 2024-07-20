@@ -53,9 +53,12 @@ export default function Header() {
         <div className="hidden lg:block">
           <button
             type="button"
-            className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            className="px-4 py-2 text-sm text-white duration-100 bg-red-500 rounded-lg shadow-md focus:shadow-none ring-offset-2 ring-indigo-600 focus:ring-2 font-semibold hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 flex items-center gap-2"
             onClick={CTFTimeRoute}
           >
+            <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="#fff" className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" color="#000000">
+              <path fillRule="evenodd" d="M8 21L8 16M8 16V3.57709C8 3.10699 8.5161 2.81949 8.91581 3.06693L17.7061 8.50854C18.0775 8.73848 18.0866 9.2756 17.7231 9.51793L8 16Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
             CTFTime
           </button>
         </div>
