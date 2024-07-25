@@ -6,7 +6,7 @@ function Team() {
   const cardsData = [
     {
       image:
-        "https://ctftime.org/media/cache/31/8c/318c1f972ab9a656ccb62b59b4a09165.jpg",
+        "https://cdn.discordapp.com/attachments/1164514364196409377/1266097720976736407/Ai_Generated_samurai_man_n_suit_-_Copy.jpeg?ex=66a3e8e3&is=66a29763&hm=a127e7a2fd74e13d87aef777f1b4b4def341567afa5afd961ee4bef06d49dc36&",
       name: "Charlie",
       info: "A weeb who loves to make and break code",
     },
