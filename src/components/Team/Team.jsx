@@ -25,6 +25,12 @@ function Team() {
       name: "MajorSyncedBeaver",
       info: "RE,Pwning,bikes and crypto with a side of Pina Colada",
     },
+    {
+      image:
+        "https://i.imgur.com/ZL9XN0R.jpeg",
+      name: "haru",
+      info: "turning my skill issue into victories, one CTF at a time :3",
+    },
   ];
 
   return (
