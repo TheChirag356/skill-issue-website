@@ -11,7 +11,7 @@ function Team() {
     },
     {
       image:
-        "https://cdn.discordapp.com/attachments/1164514364196409377/1266097720976736407/Ai_Generated_samurai_man_n_suit_-_Copy.jpeg?ex=66a3e8e3&is=66a29763&hm=a127e7a2fd74e13d87aef777f1b4b4def341567afa5afd961ee4bef06d49dc36&",
+        "https://en.gravatar.com/avatar/3079e4e66a9b33712a35e2ecf165b5ad?s=1024",
       name: "Charlie",
       info: "A weeb who loves to make and break code",
     },

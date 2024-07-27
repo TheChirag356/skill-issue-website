@@ -11,7 +11,13 @@ function LandingPage() {
     const fetchData = async () => {
       const url = "https://ctftime.org/api/v1/teams/271383/";
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            
+          },
+        });
         if (!response.ok) {
           throw new Error(`Response status: ${response.status}`);
         }
