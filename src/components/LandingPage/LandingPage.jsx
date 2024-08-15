@@ -9,7 +9,7 @@ function LandingPage() {
 
   React.useEffect(() => {
     const fetchData = async () => {
-      const url = "https://ctftime.org/api/v1/teams/271383/";
+      const url = "/api/v1/teams/271383/";
       try {
         const response = await fetch(url, {
           method: "GET",
@@ -23,6 +23,8 @@ function LandingPage() {
         }
 
         const data = await response.json();
+        console.log(`Country: ${data["rating"]["2024"]["country_place"]}`);
+        console.log(`Global: ${data["rating"]["2024"]["rating_place"]}`);
         setCountryRank(data["rating"]["2024"]["country_place"]);
         setGlobalRank(data["rating"]["2024"]["rating_place"]);
       } catch (error) {
