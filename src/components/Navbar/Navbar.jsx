@@ -1,6 +1,6 @@
 import React from 'react'
 import CircumIcon from '@klarr-agency/circum-icons-react'
-// import { CiFlag1 } from "react-icons/ci";
+import {Link, NavLink} from 'react-router-dom'
 
 function Navbar() {
   return (

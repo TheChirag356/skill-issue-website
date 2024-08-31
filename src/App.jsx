@@ -9,9 +9,9 @@ function App() {
     <div className='w-full min-h-screen text-white bg-zinc-900'>
       <Navbar />
       <LandingPage />
-      <Marquee />
+      {/* <Marquee /> */}
       <About />
-      <Eyes />
+      {/* <Eyes /> */}
       <Team />
       <Cards />
       <Footer />

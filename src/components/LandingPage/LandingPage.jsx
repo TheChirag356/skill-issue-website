@@ -38,7 +38,7 @@ function LandingPage() {
   }, [setCountryRank, setGlobalRank, setIsLoading]);
 
   return (
-    <div data-scroll data-scroll-speed="-.3" className="w-full h-screen bg-stone-300 dark:bg-zinc-900 pt-1">
+    <div data-scroll data-scroll-speed="-.3" className="w-full h-screen bg-stone-300 dark:bg-[#2a323f] pt-1">
       <div className="textstructure mt-40 px-20">
         {["We Are", "An Upcoming", "CTF Team"].map((item, index) => {
           return (
@@ -77,11 +77,6 @@ function LandingPage() {
             )}
           </>
         )}
-        {/* {[`Country Rank: ${countryRank}`, `Global Rank: ${globalRank}`].map((item, index) => (
-          <p className="text-md font-light tracking-tight leading-none">
-            {item}
-          </p>
-        ))} */}
         <div className="ctftime flex items-center gap-3">
           <div className="px-5 py-2 border-[1px] dark:border-zinc-400 rounded-full font-light text-md uppercase">
             On CTFTime

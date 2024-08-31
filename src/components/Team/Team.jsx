@@ -34,7 +34,7 @@ function Team() {
   ];
 
   return (
-    <div className="w-full py-20 bg-zinc-900">
+    <div className="w-full py-20 bg-[#2a323f]">
       <div className="w-full px-20 border-b-[1px] border-zinc-700 pb-20 flex items-center justify-center ">
         <h1 className='text-7xl font-["Neue Montreal"] tracking-tight font-semibold'>
           Our Team
