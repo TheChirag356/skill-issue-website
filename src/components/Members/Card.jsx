@@ -5,7 +5,7 @@ function Card({ image, name, info }) {
 
   return (
     <div
-      className="cardcontainer relative w-full h-[50vh] md:h-[75vh] bg-zinc-800"
+      className="cardcontainer relative w-full h-[50vh] md:h-[75vh]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -20,7 +20,11 @@ function Card({ image, name, info }) {
           <h1 className="text-2xl font-['Neue Montreal'] text-white">{name}</h1>
           <h3 className="text-white">{info}</h3>
         </div>
-        <img className="w-full h-full object-cover hover:scale-90 transition-transform duration-150 ease-linear" src={image} alt={name} />
+        <img
+          className="w-full h-full object-cover hover:scale-90 transition-transform duration-150 ease-linear"
+          src={image}
+          alt={name}
+        />
       </div>
     </div>
   );
