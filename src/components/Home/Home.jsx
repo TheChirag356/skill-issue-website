@@ -4,56 +4,55 @@ import styled from "styled-components";
 import axios from "axios";
 
 const AnimatedButton = styled.div`
-    --bg-color: ${(props) => (props.darkMode ? "white" : "#191919")};
-    --text-color: ${(props) =>
-      props.darkMode ? "rgba(0, 0, 0, 0.73)" : "rgba(255, 255, 255, 0.87)"};
-    --border-color: ${(props) =>
-      props.darkMode ? "rgba(0, 0, 0, 0.24)" : "rgba(255, 255, 255, 0.24)"};
-    --hover-bg: ${(props) => (props.darkMode ? "#191919" : "white")};
-    --hover-text: ${(props) => (props.darkMode ? "white" : "#191919")};
+  --bg-color: ${(props) => (props.darkMode ? "white" : "#191919")};
+  --text-color: ${(props) =>
+    props.darkMode ? "rgba(0, 0, 0, 0.73)" : "rgba(255, 255, 255, 0.87)"};
+  --border-color: ${(props) =>
+    props.darkMode ? "rgba(0, 0, 0, 0.24)" : "rgba(255, 255, 255, 0.24)"};
+  --hover-bg: ${(props) => (props.darkMode ? "#191919" : "white")};
+  --hover-text: ${(props) => (props.darkMode ? "white" : "#191919")};
 
-    padding: 10px 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 50px;
-    font-weight: 500;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: all ease 0.4s;
+  position: relative;
+  font-size: 18px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--hover-bg);
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
     transition: all ease 0.4s;
+  }
+
+  &:hover::after {
+    bottom: 0;
+    border-radius: 0;
+  }
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
     position: relative;
-    font-size: 18px;
-    overflow: hidden;
-    cursor: pointer;
+    z-index: 9;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background-color: var(--hover-bg);
-      left: 0;
-      bottom: -100%;
-      border-radius: 50%;
-      transition: all ease 0.4s;
-    }
-
-    &:hover::after {
-      bottom: 0;
-      border-radius: 0;
-    }
-
-    a {
-      color: var(--text-color);
-      text-decoration: none;
-      position: relative;
-      z-index: 9;
-    }
-
-    &:hover a {
-      color: var(--hover-text);
-      font-weight: 500;
-    }
-  `;
-
+  &:hover a {
+    color: var(--hover-text);
+    font-weight: 500;
+  }
+`;
 
 function Home({ darkMode = false }) {
   const [countryRank, setCountryRank] = React.useState(null);
@@ -83,7 +82,6 @@ function Home({ darkMode = false }) {
     fetchData();
   }, []);
 
-  
   return (
     // <div data-scroll data-scroll-speed="-.3" className="w-full pt-1">
     <div className="w-full pt-1">
