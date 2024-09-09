@@ -34,6 +34,11 @@ function Members() {
       name: "moistshrek458",
       info: "i wonder if revolution ever touches the ruined walls of bastille now and understand, it never returned the same.",
     },
+    {
+      image: "https://i.pinimg.com/originals/2e/4c/7b/2e4c7be1dc0ef9d0f578a9c27877af0a.gif",
+      name: "kill_switch",
+      info: "fuck it we ball :)",
+    },
   ];
 
   //   return (
