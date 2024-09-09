@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import { Navbar, Footer } from "./components";
-import LocomotiveScroll from "locomotive-scroll";
 
 function AppLayout() {
   // const locomotiveScroll = new LocomotiveScroll();

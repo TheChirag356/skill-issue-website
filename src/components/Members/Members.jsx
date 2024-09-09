@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import { Github, Twitter, LinkedinOption } from 'grommet-icons';
 
 function Members() {
   const cardsData = [
@@ -7,61 +7,75 @@ function Members() {
       image: "https://i.imgur.com/rw6rlh0.jpeg",
       name: "ssdon",
       info: "The one who started it all",
+      links: {
+        linkedin: "",
+        github: "",
+        twitter: "",
+      },
     },
     {
       image:
         "https://en.gravatar.com/avatar/3079e4e66a9b33712a35e2ecf165b5ad?s=1024",
       name: "Charlie",
       info: "A weeb who loves to make and break code",
+      links: {
+        linkedin: "",
+        github: "",
+        twitter: "",
+      },
     },
     {
       image: "https://i.imgur.com/lpzd5i7.png",
       name: "Cherry",
       info: "A passionate CTF player specializing in web exploitation and penetration testing.",
+      links: {
+        linkedin: "",
+        github: "",
+        twitter: "",
+      },
     },
     {
       image: "https://i.imgur.com/cqfNszN.jpeg",
       name: "MajorSyncedBeaver",
       info: "RE,Pwning,bikes and crypto with a side of Pina Colada",
+      links: {
+        linkedin: "",
+        github: "",
+        twitter: "",
+      },
     },
     {
       image: "https://i.imgur.com/ZL9XN0R.jpeg",
       name: "haru",
       info: "turning my skill issue into victories, one CTF at a time :3",
+      links: {
+        linkedin: "",
+        github: "",
+        twitter: "",
+      },
     },
     {
-      image: "https://i.imgur.com/bQEYyu3.png",
+      image: "https://i.pinimg.com/736x/69/d1/c0/69d1c07d063d76cfd802110e028ed0e1.jpg",
       name: "moistshrek458",
-      info: "i wonder if revolution ever touches the ruined walls of bastille now and understand, it never returned the same.",
+      info: "i wonder if revolution ever touches the ruined walls of bastille now and understands, it never returned the same.",
+      links: {
+        linkedin: "",
+        github: "",
+        twitter: "",
+      },
     },
     {
-      image: "https://i.pinimg.com/originals/2e/4c/7b/2e4c7be1dc0ef9d0f578a9c27877af0a.gif",
+      image:
+        "https://i.pinimg.com/originals/2e/4c/7b/2e4c7be1dc0ef9d0f578a9c27877af0a.gif",
       name: "kill_switch",
       info: "fuck it we ball :)",
+      links: {
+        linkedin: "",
+        github: "",
+        twitter: "",
+      },
     },
   ];
-
-  //   return (
-  //     <div classNameName="w-full pt-36 grid grid-cols-1 divide-y">
-  //       <div classNameName="w-full px-20 border-white pb-8 flex items-center justify-center ">
-  //         <h1 classNameName="text-7xl font-neuemontreal tracking-tight font-semibold text-white">
-  //           Our Team
-  //         </h1>
-  //       </div>
-  //       <div classNameName="px-20 mt-10">
-  //         <div classNameName="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto pt-10">
-  //           {cardsData.map((card, index) => (
-  //             <Card
-  //               key={index}
-  //               image={card.image}
-  //               name={card.name}
-  //               info={card.info}
-  //             />
-  //           ))}
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
 
   return (
     <>
@@ -84,14 +98,14 @@ function Members() {
 
               <div className="flex flex-wrap">
                 {cardsData.map((card, index) => (
-                  <div className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                  <div key={index} className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
                     <div className="flex flex-col">
-                      <a href="#" className="mx-auto">
-                        <img
-                          className="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
-                          src={card.image}
-                        />
-                      </a>
+                      <img
+                        className="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                        src={card.image}
+                        alt={`${card.name}'s profile picture`}
+                        loading="lazy"
+                      />
 
                       <div className="text-center mt-6">
                         <h1 className="text-gray-50 text-xl font-bold mb-1">
@@ -107,24 +121,24 @@ function Members() {
                                 transition-opacity duration-300"
                         >
                           <a
-                            href="#"
-                            className="flex rounded-full hover:bg-indigo-50 h-10 w-10"
+                            href={card.links.github}
+                            className="flex rounded-full hover:bg-indigo-50 h-10 w-10 justify-center items-center"
                           >
-                            <i className="mdi mdi-linkedin text-indigo-500 mx-auto mt-2"></i>
+                            <Github />
                           </a>
 
                           <a
-                            href="#"
-                            className="flex rounded-full hover:bg-blue-50 h-10 w-10"
+                            href={card.links.twitter}
+                            className="flex rounded-full hover:bg-blue-50 h-10 w-10 items-center justify-center"
                           >
-                            <i className="mdi mdi-twitter text-blue-300 mx-auto mt-2"></i>
+                            <Twitter />
                           </a>
 
                           <a
-                            href="#"
-                            className="flex rounded-full hover:bg-orange-50 h-10 w-10"
+                            href={card.links.linkedin}
+                            className="flex rounded-full hover:bg-orange-50 h-10 w-10 items-center justify-center"
                           >
-                            <i className="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
+                            <LinkedinOption />
                           </a>
                         </div>
                       </div>
