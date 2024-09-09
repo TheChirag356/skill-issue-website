@@ -2,8 +2,8 @@ import React from "react";
 
 function Contact() {
   return (
-    <section className="body-font relative text-gray-400 font-neuemontreal mt-14">
-      <div className="container mx-auto px-5 py-24">
+    <section className="body-font relative text-gray-400 font-neuemontreal mt-12">
+      <div className="container mx-auto px-5 pt-20 pb-12">
         <div className="mb-12 flex w-full flex-col text-center">
           <h1 className="title-font mb-4 font-bold text-white text-6xl">
             Contact Us
@@ -67,8 +67,8 @@ function Contact() {
               </div>
             </div>
             <div className="w-full p-2">
-              <button className="mx-auto flex rounded border-0 bg-indigo-500 py-2 px-8 text-lg text-white hover:bg-indigo-600 focus:outline-none">
-                Button
+              <button className="mx-auto flex rounded border-0 bg-[#df3e46] py-2 px-8 text-lg text-white hover:bg-[#e3000b] focus:outline-none">
+                Submit
               </button>
             </div>
           </div>

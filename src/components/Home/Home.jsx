@@ -1,50 +1,16 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import styled from "styled-components";
+import axios from "axios";
 
-function Home({ darkMode = false }) {
-  const [countryRank, setCountryRank] = React.useState(null);
-  const [globalRank, setGlobalRank] = React.useState(null);
-  const [isLoading, setIsLoading] = React.useState(true);
-
-  React.useEffect(() => {
-    const fetchData = async () => {
-      const url = "/api/v1/teams/271383/";
-      try {
-        const response = await fetch(url, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        if (!response.ok) {
-          throw new Error(`Response status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log(`Country: ${data["rating"]["2024"]["country_place"]}`);
-        console.log(`Global: ${data["rating"]["2024"]["rating_place"]}`);
-        setCountryRank(data["rating"]["2024"]["country_place"]);
-        setGlobalRank(data["rating"]["2024"]["rating_place"]);
-      } catch (error) {
-        console.error(error.message);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [setCountryRank, setGlobalRank, setIsLoading]);
-  // 42,50, 63
-  const AnimatedButton = styled.div`
-  
-    --bg-color: ${(props) => (props.darkMode ? "white" : "#2a323f")};
+const AnimatedButton = styled.div`
+    --bg-color: ${(props) => (props.darkMode ? "white" : "#191919")};
     --text-color: ${(props) =>
       props.darkMode ? "rgba(0, 0, 0, 0.73)" : "rgba(255, 255, 255, 0.87)"};
     --border-color: ${(props) =>
       props.darkMode ? "rgba(0, 0, 0, 0.24)" : "rgba(255, 255, 255, 0.24)"};
-    --hover-bg: ${(props) => (props.darkMode ? "#2a323f" : "white")};
-    --hover-text: ${(props) => (props.darkMode ? "white" : "#2a323f")};
+    --hover-bg: ${(props) => (props.darkMode ? "#191919" : "white")};
+    --hover-text: ${(props) => (props.darkMode ? "white" : "#191919")};
 
     padding: 10px 20px;
     border: 1px solid var(--border-color);
@@ -88,6 +54,36 @@ function Home({ darkMode = false }) {
     }
   `;
 
+
+function Home({ darkMode = false }) {
+  const [countryRank, setCountryRank] = React.useState(null);
+  const [globalRank, setGlobalRank] = React.useState(null);
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const url = "/api/v1/teams/271383/";
+      try {
+        const response = await axios.get(url);
+        const data = response.data;
+        if (data && data.rating && data.rating["2024"]) {
+          setCountryRank(data.rating["2024"].country_place);
+          setGlobalRank(data.rating["2024"].rating_place);
+        } else {
+          throw new Error("Invalid data format");
+        }
+      } catch (error) {
+        console.error(error.message);
+        // Handle error state if necessary
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  
   return (
     // <div data-scroll data-scroll-speed="-.3" className="w-full pt-1">
     <div className="w-full pt-1">
@@ -116,7 +112,7 @@ function Home({ darkMode = false }) {
           );
         })}
       </div>
-      <div className="border-t-[1px] border-stone-800 dark:border-zinc-800 mt-24 flex justify-between items-center py-5 px-20 text-white">
+      <div className="border-t-[1px] border-stone-800 dark:border-zinc-800 mt-20 flex flex-col md:flex-row gap-5 justify-between items-center pt-5 px-20 text-white">
         {isLoading ? (
           <p>Loading...</p>
         ) : (

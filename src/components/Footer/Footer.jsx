@@ -3,14 +3,17 @@ import { Mail, Twitter, Github, Linkedin } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="w-full px-4 md:px-20 py-8 font-mono bg-[#2a323f] text-white">
-      <div className="container mx-auto flex flex-wrap justify-between items-center">
+    <footer className="w-full px-4 md:pt-10 py-8 font-mono bg-[#191919] text-white">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        {/* Footer Text */}
         <div className="w-full md:w-1/2 text-center md:text-left mb-4 md:mb-0">
           <p className="text-sm opacity-80">
             © Team skill_issue 2024. All rights reserved
           </p>
         </div>
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end gap-3">
+
+        {/* Social and External Links */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end gap-4 flex-wrap">
           <a
             href="https://ctftime.org/team/271383"
             target="_blank"
@@ -25,16 +28,16 @@ function Footer() {
               className="cursor-pointer shadow-lg"
             />
           </a>
-          <a href="">
+          <a href="" aria-label="Email">
             <Mail color="#ffffff" />
           </a>
-          <a href="">
+          <a href="" aria-label="Twitter">
             <Twitter color="#ffffff" />
           </a>
-          <a href="https://github.com/team-skillissue">
+          <a href="https://github.com/team-skillissue" aria-label="Github">
             <Github color="#ffffff" />
           </a>
-          <a href="">
+          <a href="" aria-label="LinkedIn">
             <Linkedin color="#ffffff" strokeWidth={1} />
           </a>
         </div>

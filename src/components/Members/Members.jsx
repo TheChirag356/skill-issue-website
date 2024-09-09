@@ -30,9 +30,9 @@ function Members() {
       info: "turning my skill issue into victories, one CTF at a time :3",
     },
     {
-      image: "https://imgur.com/bQEYyu3",
+      image: "https://i.imgur.com/bQEYyu3.png",
       name: "moistshrek458",
-      info: "I wonder if revolution ever touches the ruined walls of Bastille now & understand, it never returned the same.",
+      info: "i wonder if revolution ever touches the ruined walls of bastille now and understand, it never returned the same.",
     },
   ];
 
