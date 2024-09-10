@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Twitter, LinkedinOption } from 'grommet-icons';
+import { Github, Twitter, LinkedinOption, Medium } from "grommet-icons";
 
 function Members() {
   const cardsData = [
@@ -11,6 +11,7 @@ function Members() {
         linkedin: "",
         github: "",
         twitter: "",
+        medium: "",
       },
     },
     {
@@ -19,9 +20,10 @@ function Members() {
       name: "Charlie",
       info: "A weeb who loves to make and break code",
       links: {
-        linkedin: "",
-        github: "",
-        twitter: "",
+        linkedin: "https://www.linkedin.com/in/chiragarora0/",
+        github: "https://github.com/TheChirag356/",
+        twitter: "https://x.com/chiragkun",
+        medium: "https://medium.com/@charliebreakscode",
       },
     },
     {
@@ -32,6 +34,7 @@ function Members() {
         linkedin: "",
         github: "",
         twitter: "",
+        medium: "",
       },
     },
     {
@@ -42,6 +45,7 @@ function Members() {
         linkedin: "",
         github: "",
         twitter: "",
+        medium: "",
       },
     },
     {
@@ -52,16 +56,19 @@ function Members() {
         linkedin: "",
         github: "",
         twitter: "",
+        medium: "",
       },
     },
     {
-      image: "https://i.pinimg.com/736x/69/d1/c0/69d1c07d063d76cfd802110e028ed0e1.jpg",
+      image:
+        "https://i.pinimg.com/736x/69/d1/c0/69d1c07d063d76cfd802110e028ed0e1.jpg",
       name: "moistshrek458",
       info: "i wonder if revolution ever touches the ruined walls of bastille now and understands, it never returned the same.",
       links: {
-        linkedin: "",
-        github: "",
-        twitter: "",
+        linkedin: "https://www.linkedin.com/in/ishwardeep-singh-405a9324a/",
+        github: "https://github.com/ishwardeepp",
+        twitter: "https://x.com/Ishwardeep78937",
+        medium: "https://medium.com/@ishwardeep.work",
       },
     },
     {
@@ -73,6 +80,7 @@ function Members() {
         linkedin: "",
         github: "",
         twitter: "",
+        medium: "",
       },
     },
   ];
@@ -98,7 +106,10 @@ function Members() {
 
               <div className="flex flex-wrap">
                 {cardsData.map((card, index) => (
-                  <div key={index} className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                  <div
+                    key={index}
+                    className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4"
+                  >
                     <div className="flex flex-col">
                       <img
                         className="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
@@ -139,6 +150,13 @@ function Members() {
                             className="flex rounded-full hover:bg-orange-50 h-10 w-10 items-center justify-center"
                           >
                             <LinkedinOption />
+                          </a>
+
+                          <a
+                            href={card.links.medium}
+                            className="flex rounded-full hover:bg-orange-50 h-10 w-10 items-center justify-center"
+                          >
+                            <Medium />
                           </a>
                         </div>
                       </div>
