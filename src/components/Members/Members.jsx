@@ -77,10 +77,10 @@ function Members() {
       name: "kill_switch",
       info: "fuck it we ball :)",
       links: {
-        linkedin: "",
-        github: "",
-        twitter: "",
-        medium: "",
+        linkedin: "https://www.linkedin.com/in/brahamdeep-singh-sabharwal-14a914256/",
+        github: "https://github.com/Brahamdeep",
+        twitter: "https://x.com/Brahamdeep_1",
+        medium: "https://medium.com/@brahamdeep9",
       },
     },
   ];
