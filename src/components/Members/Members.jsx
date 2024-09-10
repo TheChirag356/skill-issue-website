@@ -5,7 +5,7 @@ function Members() {
   const cardsData = [
     {
       image: "https://i.imgur.com/rw6rlh0.jpeg",
-      name: "ssdon",
+      name: "amitrochates",
       info: "The one who started it all",
       links: {
         linkedin: "https://www.linkedin.com/in/shreyansh-swami/",
