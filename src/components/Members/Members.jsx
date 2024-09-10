@@ -9,10 +9,6 @@ function Members() {
       info: "The one who started it all",
       links: {
         linkedin: "https://www.linkedin.com/in/shreyansh-swami/",
-        linkedin: "",
-        github: "",
-        twitter: "",
-        medium: "",
       },
     },
     {
@@ -54,20 +50,20 @@ function Members() {
       name: "haru",
       info: "turning my skill issue into victories, one CTF at a time :3",
       links: {
-        linkedin: "",
-        github: "",
+        linkedin:
+          "https://www.linkedin.com/in/hargun-k-269b82246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        github: "https://github.com/hargunks",
         twitter: "",
-        medium: "",
+        medium: "https://medium.com/@haru06",
       },
     },
     {
       image:
-        "https://i.pinimg.com/736x/69/d1/c0/69d1c07d063d76cfd802110e028ed0e1.jpg",
+        "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2poOXh4YTJ5YW5yOWZqbjFhMzlyNWNpZ2xqc212bWtuMHVtbnk1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SgRVbI0eregbqF08tW/giphy.gif",
       name: "moistshrek458",
       info: "i wonder if revolution ever touches the ruined walls of bastille now and understands, it never returned the same.",
       links: {
         linkedin: "https://www.linkedin.com/in/ishwardeep-singh-405a9324a/",
-        github: "https://github.com/ishwardeepp",
         twitter: "https://x.com/Ishwardeep78937",
         medium: "https://medium.com/@ishwardeep.work",
       },
@@ -133,33 +129,41 @@ function Members() {
                           className="flex items-center justify-center opacity-50 hover:opacity-100
                                 transition-opacity duration-300"
                         >
-                          <a
-                            href={card.links.github}
-                            className="flex rounded-full hover:bg-indigo-50 h-10 w-10 justify-center items-center"
-                          >
-                            <Github />
-                          </a>
+                          {card.links.linkedin ? (
+                            <a
+                              href={card.links.linkedin}
+                              className="flex rounded-full hover:bg-blue-50 h-10 w-10 items-center justify-center"
+                            >
+                              <LinkedinOption />
+                            </a>
+                          ) : null}
 
-                          <a
-                            href={card.links.twitter}
-                            className="flex rounded-full hover:bg-blue-50 h-10 w-10 items-center justify-center"
-                          >
-                            <Twitter />
-                          </a>
+                          {card.links.github ? (
+                            <a
+                              href={card.links.github}
+                              className="flex rounded-full hover:bg-indigo-50 h-10 w-10 justify-center items-center"
+                            >
+                              <Github />
+                            </a>
+                          ) : null}
 
-                          <a
-                            href={card.links.linkedin}
-                            className="flex rounded-full hover:bg-orange-50 h-10 w-10 items-center justify-center"
-                          >
-                            <LinkedinOption />
-                          </a>
+                          {card.links.twitter ? (
+                            <a
+                              href={card.links.twitter}
+                              className="flex rounded-full hover:bg-blue-50 h-10 w-10 items-center justify-center"
+                            >
+                              <Twitter />
+                            </a>
+                          ) : null}
 
-                          <a
-                            href={card.links.medium}
-                            className="flex rounded-full hover:bg-orange-50 h-10 w-10 items-center justify-center"
-                          >
-                            <Medium />
-                          </a>
+                          {card.links.medium ? (
+                            <a
+                              href={card.links.medium}
+                              className="flex rounded-full hover:bg-orange-50 h-10 w-10 items-center justify-center"
+                            >
+                              <Medium />
+                            </a>
+                          ) : null}
                         </div>
                       </div>
                     </div>
