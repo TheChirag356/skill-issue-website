@@ -8,6 +8,7 @@ function Members() {
       name: "ssdon",
       info: "The one who started it all",
       links: {
+        linkedin: "https://www.linkedin.com/in/shreyansh-swami/",
         linkedin: "",
         github: "",
         twitter: "",
@@ -77,7 +78,8 @@ function Members() {
       name: "kill_switch",
       info: "fuck it we ball :)",
       links: {
-        linkedin: "https://www.linkedin.com/in/brahamdeep-singh-sabharwal-14a914256/",
+        linkedin:
+          "https://www.linkedin.com/in/brahamdeep-singh-sabharwal-14a914256/",
         github: "https://github.com/Brahamdeep",
         twitter: "https://x.com/Brahamdeep_1",
         medium: "https://medium.com/@brahamdeep9",
