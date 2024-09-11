@@ -7,9 +7,7 @@ function Members() {
       image: "https://i.imgur.com/rw6rlh0.jpeg",
       name: "amitrochates",
       info: "The one who started it all",
-      links: {
-        linkedin: "https://www.linkedin.com/in/shreyansh-swami/",
-      },
+      links: {},
     },
     {
       image:
@@ -129,6 +127,13 @@ function Members() {
                           className="flex items-center justify-center opacity-50 hover:opacity-100
                                 transition-opacity duration-300"
                         >
+                          {Object.keys(card.links).length === 0 &&
+                          card.links.constructor === Object ? (
+                            <div className="flex h-10 w-10 items-center justify-center text-gray-400">
+                              Anonymous
+                            </div>
+                          ) : null}
+
                           {card.links.linkedin ? (
                             <a
                               href={card.links.linkedin}
