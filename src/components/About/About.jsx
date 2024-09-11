@@ -1,22 +1,23 @@
-import React from 'react'
+import React from "react";
 
 function About() {
   return (
-    <div className='w-full p-20 bg-[#CDEA68] rounded-tl-3xl rounded-tr-3xl text-black'>
-        <h1 className='font-["Neue Montreal"] text-[3.5vw] leading-[4vw] tracking-tight'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, reprehenderit rerum beatae itaque ratione ipsa illo praesentium consequuntur minus esse!
-        </h1>
-        <div className='w-full flex gap-5 border-t-[1px] pt-10 mt-20 border-[#a1b562]'>
-            <div className="w-1/2 ">
-                <h1 className="text-6xl">Our Blogs: </h1>
-                <button className='flex uppercase gap-10 items-center px-10 py-6 bg-zinc-900 rounded-full text-white mt-10 '>Read More
-                    <div className='w-2 h-2 bg-zinc-100 rounded-full'></div>
-                </button>
-            </div>
-            <div className='w-1/2 h-[60vh] bg-[#b0c859] rounded-3xl'></div>
+    <div className="w-full p-20 pt-32 rounded-tl-3xl rounded-tr-3xl text-white">
+      <div className="w-full flex flex-col md:flex-row gap-6 pt-10">
+        <div className="w-1/2">
+          <h1 className="text-[2.3vw] leading-[4vw]">
+            A competitive CTF team excelling in binary exploitation, pwning,
+            forensics, reverse engineering, cryptography, and web exploitation.
+            Their diverse skill set allows them to tackle challenges across
+            multiple cybersecurity domains with precision and expertise.
+          </h1>
         </div>
+        <div className="w-1/2 h-[60vh] rounded-3xl">
+          <img src="/logo2.png" alt="" />
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

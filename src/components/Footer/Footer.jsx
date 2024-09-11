@@ -1,30 +1,48 @@
 import React from "react";
+import { Mail, Twitter, Github, Linkedin } from "lucide-react";
 
 function Footer() {
   return (
-    <div className="flex gap-5 w-full h-screen bg-[#2a323f] p-20 font-['Montserrat 900'] ">
-      <div className="w-1/2 h-full flex flex-col justify-between">
-        <div className="heading">
-          <h1 className="text-[8vw] tracking-tight font-semibold uppercase leading-none -mb-5">
-            Eye
-          </h1>
-          <h1 className="text-[8vw] tracking-tight font-semibold uppercase leading-none -mb-5">
-            Opening
-          </h1>
+    <footer className="w-full px-4 md:pt-10 py-8 font-mono bg-[#191919] text-white">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        {/* Footer Text */}
+        <div className="w-full md:w-1/2 text-center md:text-left mb-4 md:mb-0">
+          <p className="text-sm opacity-80">
+            © Team skill_issue 2024. All rights reserved
+          </p>
         </div>
-        <h3>skill_issue</h3>
+
+        {/* Social and External Links */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end gap-4 flex-wrap">
+          <a
+            href="https://ctftime.org/team/271383"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="CTFTime Profile"
+          >
+            <img
+              src="/ctftime.svg"
+              alt="CTFTime Profile"
+              width={90}
+              height={45}
+              className="cursor-pointer shadow-lg"
+            />
+          </a>
+          <a href="" aria-label="Email">
+            <Mail color="#ffffff" />
+          </a>
+          <a href="" aria-label="Twitter">
+            <Twitter color="#ffffff" />
+          </a>
+          <a href="https://github.com/team-skillissue" aria-label="Github">
+            <Github color="#ffffff" />
+          </a>
+          <a href="" aria-label="LinkedIn">
+            <Linkedin color="#ffffff" strokeWidth={1} />
+          </a>
+        </div>
       </div>
-      <div className="w-1/2">
-      <h1 className="text-[5vw] tracking-tight font-semibold uppercase leading-none -mb-5">
-            Presentations
-            <div className="dets font-['Neue Montreal'] mt-10">
-                <a className="block text-xl font-regular" href="#">Linkedin</a>
-                <a className="block text-xl font-regular" href="#">Twitter</a>
-                <a className="block text-xl font-regular" href="#">CTFTime</a>
-            </div>
-          </h1>
-      </div>
-    </div>
+    </footer>
   );
 }
 
