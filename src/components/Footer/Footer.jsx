@@ -28,16 +28,19 @@ function Footer() {
               className="cursor-pointer shadow-lg"
             />
           </a>
-          <a href="" aria-label="Email">
+          <a href="mailto:skillissue.ctfteam@gmail.com" aria-label="Email">
             <Mail color="#ffffff" />
           </a>
-          <a href="" aria-label="Twitter">
+          {/* <a href="" aria-label="Twitter">
             <Twitter color="#ffffff" />
-          </a>
+          </a> */}
           <a href="https://github.com/team-skillissue" aria-label="Github">
             <Github color="#ffffff" />
           </a>
-          <a href="" aria-label="LinkedIn">
+          <a
+            href="https://www.linkedin.com/company/skillissue/mycompany/"
+            aria-label="LinkedIn"
+          >
             <Linkedin color="#ffffff" strokeWidth={1} />
           </a>
         </div>
