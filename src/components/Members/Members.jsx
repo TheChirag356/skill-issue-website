@@ -79,6 +79,16 @@ function Members() {
         medium: "https://medium.com/@brahamdeep9",
       },
     },
+    {
+      image: "https://i.imgur.com/WaAzlgy.jpeg",
+      name: "GeeGee",
+      info: "breaking codes and occasionally my own spirit",
+      links: {
+        linkedin: "https://www.linkedin.com/in/gurnoor-kaur-a84aa5291/",
+        medium: "https://medium.com/@gkmahindroo",
+        github: "https://github.com/gurnoork-k",
+      },
+    },
   ];
 
   return (
@@ -127,7 +137,6 @@ function Members() {
                           className="flex items-center justify-center opacity-50 hover:opacity-100
                                 transition-opacity duration-300"
                         >
-
                           {card.links.linkedin ? (
                             <a
                               href={card.links.linkedin}
