@@ -35,7 +35,7 @@ function Members() {
     {
       image: "https://i.imgur.com/cqfNszN.jpeg",
       name: "MajorSyncedBeaver",
-      info: "RE,Pwning,bikes and crypto with a side of Pina Colada",
+      info: "RE, Pwning, bikes and crypto with a side of Pina Colada",
       links: {
         linkedin: "",
         github: "",
@@ -129,7 +129,7 @@ function Members() {
                           {card.name}
                         </h1>
 
-                        <div className="text-gray-400 font-light mb-2">
+                        <div className="text-gray-400 font-light mb-2 text-center">
                           {card.info}
                         </div>
 
