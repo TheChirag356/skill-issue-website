@@ -2,13 +2,13 @@ import React from "react";
 
 export default function Blog() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="bg-[#191919] min-h-screen flex items-center justify-center">
       <div className="flex flex-col lg:flex-row-reverse justify-center p-10 gap-10 items-center">
         <div className="flex w-1/2 flex-col gap-4">
-          <div className="skeleton h-32 w-full"></div>
-          <div className="skeleton h-4 w-28"></div>
-          <div className="skeleton h-4 w-full"></div>
-          <div className="skeleton h-4 w-full"></div>
+          <div className="skeleton h-32 w-full bg-gray-700"></div>
+          <div className="skeleton h-4 w-28 bg-gray-700"></div>
+          <div className="skeleton h-4 w-full bg-gray-700"></div>
+          <div className="skeleton h-4 w-full bg-gray-700"></div>
         </div>
         <div className="w-1/2">
           <h1 className="text-5xl font-bold">Coming Soon!</h1>

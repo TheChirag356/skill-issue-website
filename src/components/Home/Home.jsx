@@ -85,7 +85,7 @@ function Home({ darkMode = false }) {
   return (
     // <div data-scroll data-scroll-speed="-.3" className="w-full pt-1">
     <div className="w-full pt-1">
-      <div className="textstructure mt-40 px-20 text-white font-neuemontreal">
+      <div className="textstructure mt-40 px-20 text-white ">
         {["We Are", "An Upcoming", "CTF Team"].map((item, index) => {
           return (
             <div className="masker">
@@ -102,7 +102,7 @@ function Home({ darkMode = false }) {
                     className="mr-[1vw] rounded-md w-[8vw] h-[5.2vw] relative top-[1vw] bg-green-500"
                   ></motion.div>
                 )} */}
-                <h1 className="flex items-center uppercase text-[6vw] h-full leading-[6.5vw] font-hack font-bold ">
+                <h1 className="flex items-center uppercase text-[6vw] h-full leading-[6.5vw] font-bold ">
                   {item}
                 </h1>
               </div>

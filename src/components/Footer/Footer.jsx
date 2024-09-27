@@ -3,7 +3,7 @@ import { Mail, Twitter, Github, Linkedin } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="w-full px-4 md:pt-10 py-8 font-mono bg-[#191919] text-white">
+    <footer className="w-full px-4 md:pt-10 py-8 bg-[#191919] text-white">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Footer Text */}
         <div className="w-full md:w-1/2 text-center md:text-left mb-4 md:mb-0">
